@@ -1,16 +1,17 @@
 import './App.css'
 import Header from './Header'
 import Footer from './Footer'
+import Home from './Home'
+import Teams from './components/Teams'
 
 
 function App() {
 
   return (
     
-    <body className="bg-[FEFCF0]">
-      <Header/>
-      <Footer/>
-    </body>
+    <div className="bg-[FEFCF0]">
+      <Teams/>
+    </div>
   )
 }
 
