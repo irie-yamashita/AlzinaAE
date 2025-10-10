@@ -5,31 +5,31 @@ function Header() {
     const navBar = [
         {
             title: "Club",
-            link: "/club"
+            route: "/club"
         },
         {
             title: "Inscripcions",
-            link: "/inscripcions"
+            route: "/inscripcions"
         },
         {
             title: "Equips",
-            link: "/equips"
+            route: "/equips"
         },
         {
             title: "Calendari",
-            link: "/calendari"
+            route: "/calendari"
         },
         {
             title: "Notícies",
-            link: "/noticies"
+            route: "/noticies"
         },
         {
             title: "Multimèdia",
-            link: "/multimedia"
+            route: "/multimedia"
         },
         {
             title: "Contacte",
-            link: "/contacte"
+            route: "/contacte"
         }
     ];
 
@@ -42,7 +42,7 @@ function Header() {
             </div>
             <nav className="flex justify-evenly items-center w-3/4">
                 { navBar.map((a) => {
-                    return  <a className="transition-transform hover:text-secondary hover:scale-105" href={a.link}>{a.title}</a>
+                    return  <a key={a.title} className="transition-transform hover:text-secondary hover:scale-105" href={a.route}>{a.title}</a>
                 })}
                
             </nav>

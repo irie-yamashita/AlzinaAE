@@ -10,7 +10,7 @@ function App() {
 
   return (
               
-    <div className="bg-bg box-border h-dvh w-dvw">
+    <div className="bg-bg box-border h-dvh w-dvw relative">
       <Header/>
       <Home/>
       <Footer/>

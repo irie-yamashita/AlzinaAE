@@ -34,7 +34,7 @@ function LastResults() {
     <div className="flex gap-3">
       {results.map((result) => {
 
-        return <Result
+        return <Result key={result.section}
           section={result.section}
           match={result.match}
         />;
