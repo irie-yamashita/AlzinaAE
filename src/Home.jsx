@@ -1,8 +1,9 @@
 
-
+import Teams from './components/Teams'
+import Hero from './components/Hero'
 function Home () {
        return (
-        <h2>HOME</h2>
+              <Hero/>
        );
 }
 
