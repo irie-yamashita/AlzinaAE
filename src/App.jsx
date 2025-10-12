@@ -5,7 +5,6 @@ import Home from './Home'
 
 
 
-
 function App() {
 
   return (
@@ -13,6 +12,7 @@ function App() {
     <div className="bg-bg box-border h-dvh w-dvw relative">
       <Header/>
       <Home/>
+
       <Footer/>
     </div>
   )
