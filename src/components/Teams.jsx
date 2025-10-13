@@ -31,16 +31,18 @@ function Teams() {
 
     return (
         <section className="p-10">
-            <h3 className="text-primary">Equips</h3>
-            <div className="flex w-full justify-center items-center gap-10">
-                {sections.map((section) => {
-                    return <SectionCard
-                        sectionName={section.name}
-                        teams={section.teams}
-                    />
-                })}
-            </div>
+            <div className="container mx-auto">
 
+                <h3 className="text-primary mb-3">Equips</h3>
+                <div className="container mx-auto flex flex-col gap-5 lg:flex-row">
+                    {sections.map((section) => {
+                        return <SectionCard
+                            sectionName={section.name}
+                            teams={section.teams}
+                        />
+                    })}
+                </div>
+            </div>
 
         </section>
     );
