@@ -25,7 +25,7 @@ function Hero() {
                     </div>
 
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at neque lacus. Phasellus mollis facilisis enim, quis finibus nunc malesuada vel. Ut vitae maximus magna. In pretium nec velit vitae fermentum.
+                        Som l'<strong className='text-secondary'>AE Alzina</strong>, un equip de futbol sala nascut al barri del Congrés i els Indians. Competim amb passió, esforç i esperit de superació. Cada partit és una oportunitat per créixer, compartir i deixar-ho tot a la pista. Uneix-te al nostre camí cap a la victòria. El futbol sala és la nostra vida, la pista el nostre escenari.<br/><br/>#123ALZINA!
                     </p>
                 </div>
             </div>
