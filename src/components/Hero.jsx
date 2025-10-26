@@ -4,7 +4,7 @@ import { AlertCircle } from 'react-feather';
 
 function Hero() {
     return (
-        <section className="h-[425px] bg-primary text-background flex relative items-center ">
+        <section className="h-[425px] bg-primary text-background flex relative items-center">
 
             <div className="w-[500px] g-[position:-120px_bottom] bg-[position: -120px_top] h-full bg-[url(https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png)] bg-[length:592px] bg-[position:-120px_60px] bg-no-repeat"></div>
 
