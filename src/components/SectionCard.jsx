@@ -3,12 +3,12 @@
 function SectionCard({ sectionName, teams }) {
     return (
 
-        <div className="flex w-full justify-center items-center bg-primary lg:w-1/2 p-2 sm:p-10 py-16 rounded-xl">
+        <a href="/equips" className="flex w-full justify-center items-center bg-primary lg:w-1/2 p-2 sm:p-10 py-16 rounded-xl">
             <div className="h-full sm:h-40 flex flex-col justify-center items-start gap-3 px-10 text-center">
                 <img className="size-24" src="/icons/ball-blue.png" alt="football" />
                 <h3 className="text-background w-full">{sectionName}</h3>
             </div>
-        </div>
+        </a>
 
         /*<div className="p-10 rounded-lg bg-primary h-full sm:h-40 flex flex-col sm:flex-wrap justify-center items-start gap-3 gap-x-5 w-full">
                 {teams.map((team) => (
