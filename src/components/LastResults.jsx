@@ -111,7 +111,7 @@ function LastResults() {
           return (
             <div
               key={index}
-              className="bg-greyAE flex justify-evenly items-center w-full py-4"
+              className="bg-greyAE flex justify-evenly items-center w-full py-4 flex-wrap"
             >
               {[results[index], results[index + 1], results[index + 2]].map(
                 (result, i) => {
