@@ -1,7 +1,7 @@
 function Stats() {
 
   return (
-    <div className="bg-primary flex justify-center items-center h-32 gap-10 md:gap-24 md:h-72">
+    <section className="bg-primary flex justify-center items-center h-32 gap-10 md:gap-24 md:h-72">
         <div className="flex flex-col text-center justify-center items-center">
             <p className="font-catallina text-[36px] text-secondary">14</p>
             <p className="font-catallina text-[16px] text-background">Equips Registrats</p>
@@ -16,7 +16,7 @@ function Stats() {
             <p className="font-catallina text-[36px] text-secondary">130+</p>
             <p className="font-catallina text-[16px] text-background">Premis Guanyats</p>
         </div>
-    </div>
+    </section>
   )
 }
 

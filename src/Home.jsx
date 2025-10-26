@@ -9,10 +9,10 @@ import LastNews from './components/LastNews';
 function Home () {
        return (
               <div className='w-full'>
-                     <Hero/>,
-                     <Teams></Teams>,
-                     <Stats></Stats>,
-                     <LastResults></LastResults>,
+                     <Hero/>
+                     <Teams></Teams>
+                     <Stats></Stats>
+                     <LastResults></LastResults>
                      <LastNews></LastNews>
               </div>
        );

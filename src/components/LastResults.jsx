@@ -54,7 +54,7 @@ function LastResults() {
     {
       section: "Infantil 'A'",
       match: {
-        id: 1,
+        id: 4,
         homeTeam: {
           name: "Alzina AE",
           logo: "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
@@ -70,7 +70,7 @@ function LastResults() {
     {
       section: "Cadet 'B'",
       match: {
-        id: 2,
+        id: 5,
         homeTeam: {
           name: "ITB",
           logo: "https://files.fcf.cat/img/_125vermell.png",
@@ -86,7 +86,7 @@ function LastResults() {
     {
       section: "Sènior Fem 'A'",
       match: {
-        id: 2,
+        id: 6,
         homeTeam: {
           name: "ITB",
           logo: "https://files.fcf.cat/img/_125vermell.png",
@@ -135,7 +135,7 @@ function LastResults() {
       <div className="w-full flex justify-end text-center">
         <a
           href=""
-          className="w-48 flex gap-2 justify-center items-center btn-secondary p-2 rounded-lg mt-5"
+          className="btn w-50 btn-secondary mt-5 gap-2"
         >
           <Calendar></Calendar> Veure Calendari
         </a>

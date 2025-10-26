@@ -4,6 +4,7 @@ import SectionCard from "./SectionCard";
 function Teams() {
     const sections = [
         {
+            id: 1,
             name: "CEEB",
             teams: [
                 "Benjamí 'A'",
@@ -17,6 +18,7 @@ function Teams() {
             ]
         },
         {
+            id: 2,
             name: "FCF",
             teams: [
                 "Infantil 'A'",
@@ -36,6 +38,7 @@ function Teams() {
                 <div className="container mx-auto flex flex-col gap-5 lg:flex-row">
                     {sections.map((section) => {
                         return <SectionCard
+                            key={section.id}
                             sectionName={section.name}
                             teams={section.teams}
                         />

@@ -10,7 +10,7 @@ function SectionCard({ sectionName, teams }) {
             </div>
         </div>
 
-        /* <div className="h-full sm:h-40 flex flex-col sm:flex-wrap justify-center items-start gap-3 gap-x-5 w-full px-10">
+        /*<div className="p-10 rounded-lg bg-primary h-full sm:h-40 flex flex-col sm:flex-wrap justify-center items-start gap-3 gap-x-5 w-full">
                 {teams.map((team) => (
                     <div key={team} className="flex items-center gap-3 text-background">
                         <img
@@ -21,7 +21,7 @@ function SectionCard({ sectionName, teams }) {
                         <p>{team}</p>
                     </div>
                 ))}
-        </div> */
+        </div>*/
 
     );
 }
