@@ -1,9 +1,9 @@
 
-import Teams from './components/Teams'
-import Hero from './components/Hero'
-import Stats from './components/Stats'
-import LastResults from './components/LastResults';
-import LastNews from './components/LastNews';
+import Teams from './Teams'
+import Hero from './Hero'
+import Stats from './Stats'
+import LastResults from './LastResults';
+import LastNews from './LastNews';
 
 
 function Home () {
