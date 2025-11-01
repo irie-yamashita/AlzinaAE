@@ -13,8 +13,8 @@ function App() {
               
     <div className="bg-background box-border h-dvh w-dvw relative">
       <Header/>
-      <Inscriptions></Inscriptions>
-      {/*<Home/>*/}
+      {/* {<Inscriptions></Inscriptions>} */}
+      <Home/>
 
       <Footer/>
     </div>
