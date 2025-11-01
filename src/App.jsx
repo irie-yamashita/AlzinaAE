@@ -11,7 +11,7 @@ function App() {
 
   return (
               
-    <div className="bg-background box-border h-dvh w-dvw relative">
+    <div className="bg-background box-border w-full h-full mx-auto relative">
       <Header/>
       {/* {<Inscriptions></Inscriptions>} */}
       <Home/>

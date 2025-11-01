@@ -102,7 +102,7 @@ function LastResults() {
   ];
 
   return (
-    <section className="container mx-auto py-16">
+    <section className="container py-12">
       <h3 className="text-primary mb-3">Últims resultats</h3>
       <div className="grid grid-cols-3 mx-auto gap-y-4">
         {results.map((result) => {

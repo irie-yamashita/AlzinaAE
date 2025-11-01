@@ -3,13 +3,6 @@ import Noticia from "./Noticia";
 function LastNews() {
   const noticies = [
     {
-      id: 1,
-      title: "PRIMER PARTIT LLIGA",
-      date: "2025-10-14",
-      titular: "Aquest cap de setmana han començat els partits dels equips federats.",
-      img: "images/primerPartit.jpg",
-    },
-    {
       id: 2,
       title: "INICI TEMPORADA 25-26",
       date: "2025-09-12",
@@ -35,10 +28,10 @@ function LastNews() {
   ];
 
   return (
-    <section className="container mx-auto mb-10">
+    <section className="container py-12">
       <h3 className="text-primary mb-3">Últimes Notícies</h3>
 
-      <div className="flex flex-wrap items-center justify-center gap-9 lg:gap-12">
+      <div className="grid grid-cols-3 gap-9 lg:gap-12">
         {noticies.map((noticia) => {
           return(
           <a href="/noticies">

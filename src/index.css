@@ -69,3 +69,8 @@ p, a{
 .btn-secondary {
   @apply bg-secondary text-primary;
 }
+
+.container {
+  max-width: 1170px;
+  margin: auto auto;
+}
