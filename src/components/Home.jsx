@@ -6,15 +6,16 @@ import LastResults from './LastResults';
 import LastNews from './LastNews';
 
 
-function Home () {
+function Home() {
        return (
-              <div className='w-full'>
-                     <Hero/>
+              <>
+                     <Hero />
                      <Teams></Teams>
                      <Stats></Stats>
                      <LastResults></LastResults>
                      <LastNews></LastNews>
-              </div>
+              </>
+
        );
 }
 

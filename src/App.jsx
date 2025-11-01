@@ -11,10 +11,12 @@ function App() {
 
   return (
               
-    <div className="bg-background box-border w-full h-full mx-auto relative">
+  <div className="bg-background box-border w-full min-h-[100dvh] relative">
       <Header/>
-      {/* {<Inscriptions></Inscriptions>} */}
-      <Home/>
+      <div className="pb-48">
+        {/* <Inscriptions /> */}
+        <Home/>
+      </div>
 
       <Footer/>
     </div>
