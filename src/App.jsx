@@ -1,8 +1,8 @@
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from './components/Home'
-import Inscriptions from './components/Inscriptions'
+import Home from './pages/Home'
+import Inscriptions from './pages/Inscriptions'
 
 
 
@@ -14,8 +14,8 @@ function App() {
   <div className="bg-background box-border w-full min-h-[100dvh] relative">
       <Header/>
       <div className="pb-48">
-        {/* <Inscriptions /> */}
-        <Home/>
+        <Inscriptions />
+        {/* <Home/> */}
       </div>
 
       <Footer/>
