@@ -14,8 +14,8 @@ function App() {
   <div className="bg-background box-border w-full min-h-[100dvh] relative">
       <Header/>
       <div className="pb-48">
-        <Inscriptions />
-        {/* <Home/> */}
+        {/* <Inscriptions /> */}
+        <Home/>
       </div>
 
       <Footer/>
