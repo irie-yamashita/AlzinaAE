@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { validarCorreu, validarTelefon, validarMajoriaEdat, validarCamp, validarFormulari } from "../utils/validations"; 
 
 
 function Inscriptions() {
@@ -8,17 +9,19 @@ function Inscriptions() {
     { id: 'name', name: 'name', label: 'Nom', required: true, type: 'text'},
     { id: 'lastName', name: 'lastName', label: 'Cognom', required: true, type: 'text' },
     { id: 'phone', name: 'phone', label: 'Telèfon', required: true, type: 'telf' },
-    { id: 'mail', name: 'mail', label: 'Correu electrònic', required: true, type: 'email' },
+    { id: 'mail', name: 'mail', label: 'Correu electrònic', required: true, type: 'text' },
     { id: 'birthdate', name: 'birthdate', label: 'Data naixement', required: true, type: 'date' },
   ]
 
-  //* ESTATS
+  //* HOOKS - useState
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
     mail: "",
     phone: "",
     birthdate: "",
+    team: "fcf",
+    inscriptionType: "new"
   });
 
   const [submitMessage, setSubmitMessage] = useState(null);
@@ -30,12 +33,17 @@ function Inscriptions() {
   //* HANDLERS
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, tagName, type} = e.target;
 
     // Actualitzem el valor del formulari
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    validateField(name, value)
+
+    if(tagName === "INPUT" && e.target.type !== "radio") {
+
+      addFieldErrors(name, value)
+    }
+
 
     // Netejem l'submitMessage global quan l'usuari edita
     setSubmitMessage(null);
@@ -45,7 +53,7 @@ function Inscriptions() {
     e.preventDefault();
 
     // Validem TOT el formulari amb la nostra funció (no usem checkValidity ni required natiu)
-    const valid = globalValidation();
+    const valid = isFormValid();
 
     if (valid) {
       // Acció quan tot és correcte: aquí normalment faríem fetch/axios per enviar al servidor
@@ -63,74 +71,14 @@ function Inscriptions() {
         text: "Hi ha errors en el formulari. Revisa els camps marcats en vermell.",
       });
     }
-  }
-
-
-  //* VALIDACIONS
-
-  // correu: algo@algo.doslletresminim
-  const validarCorreu = (correu) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(correu);
-
-  // correu: nou números
-  const validarTelefon = (telefon) => /^\d{9}$/.test(telefon);
-
-  // data naixement
-  const validarMajoriaEdat = (dataNaixement) => {
-    if (!dataNaixement) return false;
-
-
-    const [any, mes, dia] = dataNaixement.split("-").map(Number);
-    const dataNaix = new Date(any, mes - 1, dia);
-
-    // Data actual (sense hora) per comparar exactament dies.
-    const avui = new Date();
-    const avuiUTC = new Date(avui.getFullYear(), avui.getMonth(), avui.getDate());
-
-    // Calculem la data límit (fa 18 anys)
-    const limitMajor = new Date(
-      avuiUTC.getFullYear() - 18,
-      avuiUTC.getMonth(),
-      avuiUTC.getDate()
-    );
-
-    // Si la data de naixement és anterior o igual a la data límit, és major d'edat
-    return dataNaix <= limitMajor;
-  };
+  }  
 
 
   //* FUNCIONS
-  const validateField = (name, value) => {
-    let message = "";
-    //console.log('validant', name, value)
 
-    switch (name) {
-      case "name":
-        if (!value.trim()) message = "El camp Nom és obligatori.";
-        break;
-
-      case "lastName":
-        if (!value.trim()) message = "El camp Cognom és obligatori.";
-        break;
-
-      case "mail":
-        if (!value.trim()) message = "El camp Correu Electrònic és obligatori.";
-        else if (!validarCorreu(value.trim())) message = "El correu electrònic no és vàlid.";
-        break;
-
-      case "phone":
-        if (!value.trim()) message = "El camp Telèfon és obligatori.";
-        else if (!validarTelefon(value.trim())) message = "El número de telèfon no és vàlid.";
-        break;
-
-      case "birthdate":
-        if (!value.trim()) message = "El camp Data Naixement és obligatori.";
-        else if (!validarMajoriaEdat(value.trim())) message = "Has de ser major d'edat (18 anys mínim)";
-        break;
-
-      default:
-        break;
-    }
-
+  const addFieldErrors = (name, value) => {
+    
+    const message = validarCamp(inputs, name, value);
 
     // actualizo errors
     setErrors((prev) => {
@@ -146,31 +94,8 @@ function Inscriptions() {
     return message;
   };
 
-
-  const globalValidation = () => {
-    const newErrors = {};
-
-    // Validació de camps obligatoris simples
-    inputs.forEach(input => {
-      console.log('input', input)
-      if (input.required == true && !formData[input.name].trim()) {
-        newErrors[input.name] = `El camp ${input.label} és obligatori.`;
-      }
-    });
-
-    // Validacions específiques
-    if (!newErrors.birthdate && !validarMajoriaEdat(formData.birthdate)) {
-      newErrors.birthdate = "Has de ser major d'edat (18 anys mínim).";
-    }
-
-    if (!newErrors.mail && !validarCorreu(formData.mail.trim())) {
-      newErrors.mail = "El correu electrònic no és vàlid.";
-    }
-
-    if (!newErrors.phone && !validarTelefon(formData.phone.trim())) {
-      newErrors.phone = "El número de telèfon no és correcte (ha de tenir 9 dígits).";
-    }
-
+  const isFormValid = () => {
+    const newErrors = validarFormulari(inputs, formData);
 
     // Actualitzem l'estat d'errors amb tots els errors trobats
     setErrors(newErrors);
@@ -179,15 +104,16 @@ function Inscriptions() {
   };
 
   function renderInput (input) {
-    const name = input.name;
+    const {name, id, type, label} = input;
     return (
       <div className="flex flex-col pt-4">
-        <label className="text-background" htmlFor={input.name}>{input.label}</label>
-        <input onChange={handleChange} className="px-3 h-10 rounded-md bg-background" type={input.type} id={input.id}name={input.name} />
+        <label className="text-background" htmlFor={name}>{label}</label>
+        <input onChange={handleChange} className={`px-3 h-10 rounded-md bg-background ${errors[id] ? 'border !border-red-500' : 'border-background'}`} type={type} id={id}name={name} />
         <span className="text-xs font-medium text-red-600 mt-1 block">{errors[name]}</span>
       </div>
     )
   }
+
 
   return (
     <main className="bg-background container py-12">
@@ -216,16 +142,16 @@ function Inscriptions() {
         <fieldset className="flex flex-col justify-stretch">
           <div className="flex text-background justify-center gap-12">
             <div className="flex items-center gap-2">
-              <input type="radio" name="inscription-type" id="new" />
+              <input type="radio" name="inscriptionType" id="new" value="new" onChange={handleChange} checked={formData.inscriptionType === "new"}/>
               <label htmlFor="new">Nova inscripció</label>
             </div>
             <div className="flex items-center gap-2">
-              <input type="radio" name="inscription-type" id="renew" />
+              <input type="radio" name="inscriptionType" id="renew" value="renew" onChange={handleChange} checked={formData.inscriptionType === "renew"} />
               <label htmlFor="renew">Renovació</label>
             </div>
           </div>
           <div className="flex w-full">
-            <select name="team" id="team">
+            <select name="team" id="team" value={formData.team} onChange={handleChange} >
               <option value="fcf">FCF</option>
               <option value="ceeb">CEEB</option>
             </select>
