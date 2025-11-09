@@ -3,7 +3,6 @@
 //* VALIDACIONS
 
 // correu: algo@algo.doslletresminim
-
 export const validarCorreu = (correu) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(correu);
 
 // correu: nou números
@@ -48,11 +47,11 @@ export const validarCamp = (inputs, name, value) => {
 
         switch (name) {
             case "mail":
-                if (!validarCorreu(value.trim())) message = "El correu electrònic no és vàlid.";
+                if (!validarCorreu(value.trim())) message = `El ${input.label} no és vàlid.`;
                 break;
 
             case "phone":
-                if (!validarTelefon(value.trim())) message = "El número de telèfon no és vàlid.";
+                if (!validarTelefon(value.trim())) message = `El ${input.label} no és vàlid. (9 dígits)`;
                 break;
 
             case "birthdate":
@@ -79,16 +78,16 @@ export const validarFormulari = (inputs, formData) => {
     });
 
     // Validacions específiques
-    if (!newErrors.birthdate && !validarMajoriaEdat(formData.birthdate)) {
-      newErrors.birthdate = "Has de ser major d'edat (18 anys mínim).";
-    }
-
     if (!newErrors.mail && !validarCorreu(formData.mail.trim())) {
-      newErrors.mail = "El correu electrònic no és vàlid.";
+      newErrors.mail = `El ${input.label} no és vàlid.`;
     }
-
+    
     if (!newErrors.phone && !validarTelefon(formData.phone.trim())) {
-      newErrors.phone = "El número de telèfon no és correcte (ha de tenir 9 dígits).";
+      newErrors.phone = `El ${input.label} no és vàlid. (9 dígits)`;
+    }
+    
+    if (!newErrors.birthdate && !validarMajoriaEdat(formData.birthdate)) {
+    newErrors.birthdate = "Has de ser major d'edat (18 anys mínim).";
     }
 
 

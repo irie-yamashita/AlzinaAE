@@ -21,86 +21,91 @@ function Inscriptions() {
     phone: "",
     birthdate: "",
     team: "fcf",
-    inscriptionType: "new"
+    inscriptionType: "new",
   });
 
   const [submitMessage, setSubmitMessage] = useState(null);
 
-  const [errors, setErrors] = useState({});
+  // Inicialitzem tots els errors com a cadenes buides
+  const [errors, setErrors] = useState({
+    name: "",
+    lastName: "",
+    mail: "",
+    phone: "",
+    birthdate: "",
+  });
 
 
 
   //* HANDLERS
 
   const handleChange = (e) => {
-    const { name, value, tagName, type} = e.target;
+    const { name, value, tagName, type } = e.target;
 
     // Actualitzem el valor del formulari
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-
-    if(tagName === "INPUT" && e.target.type !== "radio") {
-
-      addFieldErrors(name, value)
+    // Validem només inputs (no radio, no select)
+    if (tagName === "INPUT" && type !== "radio") {
+      addFieldErrors(name, value);
     }
 
-
-    // Netejem l'submitMessage global quan l'usuari edita
+    // Netejem el missatge global quan l’usuari edita
     setSubmitMessage(null);
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validem TOT el formulari amb la nostra funció (no usem checkValidity ni required natiu)
+    // Validem TOT el formulari
     const valid = isFormValid();
 
     if (valid) {
-      // Acció quan tot és correcte: aquí normalment faríem fetch/axios per enviar al servidor
       console.log("Formulari VÀLID: ", formData);
-
-      // Missatge d'èxit
       setSubmitMessage({
         type: "success",
         text: "Registre completat amb èxit!",
       });
-
     } else {
       setSubmitMessage({
         type: "error",
         text: "Hi ha errors en el formulari. Revisa els camps marcats en vermell.",
       });
     }
-  }  
+  };
+
 
 
   //* FUNCIONS
 
   const addFieldErrors = (name, value) => {
-    
     const message = validarCamp(inputs, name, value);
 
-    // actualizo errors
-    setErrors((prev) => {
-      // si no hi ha missatge, borrem la clau; si hi ha missatge, l'afegim/actualitzem
-      if (!message) {
-        const { [name]: _, ...rest } = prev;
-        return rest;
-      }
-      return { ...prev, [name]: message };
-    });
+    // Actualitzem errors: sempre guardem un text ("" o el missatge)
+    setErrors((prev) => ({
+      ...prev,
+      [name]: message || "",
+    }));
 
-    // també retornem el missatge per si volem usar-lo immediatament
     return message;
   };
 
   const isFormValid = () => {
     const newErrors = validarFormulari(inputs, formData);
 
-    // Actualitzem l'estat d'errors amb tots els errors trobats
-    setErrors(newErrors);
+    // Omplim amb "" els que no tenen error
+    const updatedErrors = {
+      name: newErrors.name || "",
+      lastName: newErrors.lastName || "",
+      mail: newErrors.mail || "",
+      phone: newErrors.phone || "",
+      birthdate: newErrors.birthdate || "",
+    };
 
-    return Object.keys(newErrors).length === 0;
+    setErrors(updatedErrors);
+
+    // Si tots els missatges són "", el formulari és vàlid
+    return Object.values(updatedErrors).every((msg) => msg === "");
   };
 
   function renderInput (input) {
@@ -115,6 +120,7 @@ function Inscriptions() {
   }
 
 
+  
   return (
     <main className="bg-background container py-12">
       <div>
