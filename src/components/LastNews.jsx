@@ -3,7 +3,7 @@ import Noticia from "./Noticia";
 function LastNews() {
   const noticies = [
     {
-      id: 2,
+      id: 'n1',
       title: "INICI TEMPORADA 25-26",
       date: "2025-09-12",
       titular:
@@ -11,7 +11,7 @@ function LastNews() {
       img: "images/cartellMasculi.jpg",
     },
     {
-      id: 3,
+      id: 'n2',
       title: "CAMPIONES DE LLIGA",
       date: "2025-05-01",
       titular:
@@ -19,7 +19,7 @@ function LastNews() {
       img: "images/campiones.jpg",
     },
     {
-      id: 4,
+      id: 'n3',
       title: "PORTES OBERTES",
       date: "2025-06-23",
       titular: "Comencen les jornades de portes obertes. Apunteu-vos!",
@@ -29,7 +29,7 @@ function LastNews() {
 
   return (
     <section className="container py-12">
-      <h3 className="text-primary mb-3">Últimes Notícies</h3>
+      <h2 className="text-primary mb-3 text-heading-desktop-3">Últimes Notícies</h2>
 
       <div className="grid grid-cols-3 gap-9 lg:gap-12">
         {noticies.map((noticia) => {

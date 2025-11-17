@@ -16,6 +16,13 @@ export default {
         catallina: ['Catallina', 'sans-serif'],
         notosans: ['NotoSans', 'sans-serif'],
       },
+      fontSize: {
+        'heading-desktop-1': '50px;',
+        'heading-desktop-2': '35px;',
+        'heading-desktop-3': '25px',
+        'heading-desktop-4': '20px',
+        'body-desktop': '16px'
+      },
     },
   },
   plugins: [],

@@ -34,7 +34,7 @@ function Teams() {
     return (
         <section className="p-10">
             <div className="container mx-auto">
-                <h3 className="text-primary mb-3">Equips</h3>
+                <h2 className="text-primary mb-3 text-heading-desktop-3">Equips</h2>
                 <div className="container mx-auto flex flex-col gap-5 lg:flex-row">
                     {sections.map((section) => {
                         return <SectionCard

@@ -1,4 +1,5 @@
 import { AlertCircle } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 
 
@@ -30,12 +31,12 @@ function Hero() {
                 </div>
             </div>
 
-            <a
-                href="/inscripcions"
+            <Link
+                to="/inscripcions"
                 className="absolute -bottom-6 right-10 btn btn-secondary"
             >
                 <AlertCircle fill="#183753" color="#e6c707" /> &nbsp; Inscripcions obertes
-            </a>
+            </Link>
         </main>
 
     )

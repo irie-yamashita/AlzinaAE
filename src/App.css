@@ -6,3 +6,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.activePath2 {
+  @apply border-b bg-slate-300/20 p-2 px-4 rounded-md;
+}
+
+.activePath {
+  @apply text-secondary font-bold underline underline-offset-8;
+}

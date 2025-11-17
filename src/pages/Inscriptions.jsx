@@ -124,7 +124,7 @@ function Inscriptions() {
   return (
     <main className="bg-background container py-12">
       <div>
-        <h2 className="text-primary">Inscripcions</h2>
+        <h1 className="text-primary text-heading-desktop-2">Inscripcions</h1>
       </div>
       <form className="bg-primary w-full rounded-xl p-20 mb-10 flex flex-col gap-8" onSubmit={handleSubmit}>
         <header className="flex flex-col gap-2 pb-8">
