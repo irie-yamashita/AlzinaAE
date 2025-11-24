@@ -19,7 +19,7 @@ function App() {
               
   <div className="bg-background box-border w-full min-h-[100dvh] relative">
       <Navbar/>
-      <div className="pb-48">
+      <div className="px-6 pb-48">
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/inscripcions' element={<Inscriptions />} />

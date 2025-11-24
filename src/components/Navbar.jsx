@@ -5,7 +5,6 @@ function Navbar() {
 
     const location = useLocation();
     const isActive = (path) => {
-        console.log(path !== location.pathname)
         if(path !== location.pathname) {
             return false;
         } else {
@@ -17,7 +16,7 @@ function Navbar() {
         {
             title: "Club",
             route: "/club"
-        },
+        },  
         {
             title: "Inscripcions",
             route: "/inscripcions"
