@@ -1,7 +1,7 @@
 import { Menu } from 'react-feather';
 import { Link, useLocation }  from 'react-router-dom';
 
-function Header() {
+function Navbar() {
 
     const location = useLocation();
     const isActive = (path) => {
@@ -63,4 +63,4 @@ function Header() {
 
 }
 
-export default Header;
+export default Navbar;
