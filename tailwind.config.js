@@ -21,7 +21,8 @@ export default {
         'heading-desktop-2': '35px;',
         'heading-desktop-3': '25px',
         'heading-desktop-4': '20px',
-        'body-desktop': '16px'
+        'body-desktop': '16px',
+        'small-desktop': '14px'
       },
     },
   },

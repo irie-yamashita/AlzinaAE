@@ -17,9 +17,9 @@ function App() {
 
   return (
               
-  <div className="bg-background box-border w-full min-h-[100dvh] relative">
+  <>
       <Navbar/>
-      <div className="px-6 pb-48">
+      <main>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/inscripcions' element={<Inscriptions />} />
@@ -30,10 +30,10 @@ function App() {
           <Route path='/club' element={<Club />} />
           <Route path='/multimedia' element={<Multimedia />} />
         </Routes>
-      </div>
+      </main>
 
       <Footer/>
-    </div>
+    </>
   )
 }
 

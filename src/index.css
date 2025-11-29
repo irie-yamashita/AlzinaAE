@@ -54,6 +54,5 @@ p, a{
 }
 
 .container {
-  max-width: 1170px;
-  margin: auto auto;
+  @apply max-w-[1200px] mx-auto px-6 xl:px-0;
 }
