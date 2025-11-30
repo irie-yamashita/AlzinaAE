@@ -19,10 +19,10 @@ function Stats() {
 
   return (
     <section className="bg-primary py-[30px] min-h-[300px] flex items-center">
-      <div className="container grid grid-cols-3 gap-[40px]">
+      <div className="container grid grid-cols-3">
         {stats.map((stat, i) => {
           return (
-            <article className={`flex flex-col text-center justify-center items-center px-5 ${i != stats.length-1 ? 'border-r' : ''}`}>
+            <article key={stat.title} className={`flex flex-col text-center justify-center items-center ${i != stats.length-1 ? 'border-r' : ''}`}>
                 <p className="font-catallina text-[25px] md:text-[36px] text-secondary">{stat.number}{stat.plus && <span>+</span>}</p>
                 <p className="font-catallina text-small-desktop md:text-[16px] text-background">{stat.title}</p>
             </article>

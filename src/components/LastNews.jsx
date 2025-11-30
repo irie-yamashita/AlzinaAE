@@ -28,21 +28,23 @@ function LastNews() {
   ];
 
   return (
-    <section className="container py-12">
+    <section className="container py-[32px]">
       <h2 className="text-primary mb-3 text-heading-desktop-3">Últimes Notícies</h2>
 
-      <div className="grid grid-cols-3 gap-9 lg:gap-12">
-        {noticies.map((noticia) => {
-          return(
-          <a href="/noticies">
-            <Noticia key={noticia.id} info={noticia}></Noticia>
-          </a>
-          )
-        })}
-      </div>
+      <div className="flex flex-col gap-8">
+        <div className="flex flex-col md:grid grid-cols-3 items-stretch gap-9 lg:gap-12">
+          {noticies.map((noticia) => {
+            return(
+            <a className="flex justify-center" href="/noticies">
+              <Noticia key={noticia.id} info={noticia}></Noticia>
+            </a>
+            )
+          })}
+        </div>
 
-      <div className="flex justify-center items-center">
-        <a href="/noticies" className="btn w-60 uppercase flex gap-2 justify-center items-center btn-primary !text-secondary p-2 rounded-lg mt-5">Veure més notícies</a>
+        <div className="flex justify-center items-center">
+          <a href="/noticies" className="btn w-60 uppercase flex gap-2 justify-center items-center btn-primary !text-secondary p-2 rounded-lg">Veure més notícies</a>
+        </div>
       </div>
       
     </section>

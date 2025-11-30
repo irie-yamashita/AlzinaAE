@@ -14,7 +14,7 @@ function Multimedia() {
   };
 
   return (
-    <main className="bg-background container py-12 space-y-6">
+    <main className="container py-12 space-y-6">
       <h1 className="text-heading-desktop-2 text-primary pb-3">Multimèdia</h1>
 
       <article className="space-y-2">

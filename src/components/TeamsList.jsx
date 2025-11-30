@@ -1,4 +1,4 @@
-import SectionCard from "./SectionCard";
+import TeamsCard from "./TeamsCard";
 
 
 function Teams() {
@@ -35,9 +35,9 @@ function Teams() {
         <section className="py-[50px]">
             <div className="container">
                 <h2 className="text-primary mb-3 text-heading-desktop-3">Equips</h2>
-                <div className="container mx-auto flex flex-col gap-5 lg:flex-row">
+                <div className="flex flex-col lg:flex-row justify-center items-stretch gap-5">
                     {sections.map((section) => {
-                        return <SectionCard
+                        return <TeamsCard
                             key={section.id}
                             sectionName={section.name}
                             teams={section.teams}

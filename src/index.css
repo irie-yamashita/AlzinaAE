@@ -29,6 +29,12 @@
   overflow-x: hidden;
 }
 
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: 'Catallina', 'NotoSans';
 }
@@ -56,3 +62,30 @@ p, a{
 .container {
   @apply max-w-[1200px] mx-auto px-6 xl:px-0;
 }
+
+
+.grid-anim {
+	transition: grid-template-columns 800ms ease-in-out, gap 800ms ease-in-out;
+  gap: 0;
+}
+
+
+
+/*-- STATS ANIM --*/
+/* @property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+#counter {
+  transition: --num 5s;
+  counter-set: num var(--num);
+  font: 800 40px system-ui;
+}
+#counter::after {
+  content: counter(num);
+}
+#counter:hover {
+  --num: 100;
+} */

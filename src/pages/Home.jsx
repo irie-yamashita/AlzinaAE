@@ -1,5 +1,5 @@
 
-import Teams from '../components/Teams'
+import TeamsList from '../components/TeamsList'
 import Hero from '../components/Hero'
 import Stats from '../components/Stats'
 import LastResults from '../components/LastResults';
@@ -10,7 +10,7 @@ function Home() {
        return (
               <>
                      <Hero />
-                     <Teams></Teams>
+                     <TeamsList></TeamsList>
                      <Stats></Stats>
                      <LastResults></LastResults>
                      <LastNews></LastNews>

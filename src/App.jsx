@@ -19,7 +19,7 @@ function App() {
               
   <>
       <Navbar/>
-      <main>
+      <main className='flex-1'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/inscripcions' element={<Inscriptions />} />
