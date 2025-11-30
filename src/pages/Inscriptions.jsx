@@ -122,7 +122,7 @@ function Inscriptions() {
 
   
   return (
-    <main className="bg-background container py-12">
+    <main className="container py-12">
       <div>
         <h1 className="text-primary text-heading-desktop-2">Inscripcions</h1>
       </div>
