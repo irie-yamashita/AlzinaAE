@@ -30,7 +30,7 @@ function Multimedia() {
       <header className='flex justify-between w-full'>
         <h1 className="text-heading-desktop-2 text-primary pb-3">Multimèdia</h1>
       </header>
-      <AudioPlayer></AudioPlayer>
+      <AudioPlayer file="football-crowd" />
       <article className="space-y-2">
         <h2 className="text-heading-desktop-3 text-primary">Sènior Femení</h2>
         <div className="flex flex-col items-stretch md:grid grid-cols-6 gap-x-2 md:gap-x-4 gap-y-6">
@@ -60,9 +60,15 @@ function Multimedia() {
         </div>
       </article>
 
-      <article className='w-full'>
-        <VideoPlayer/>
+      <article className="space-y-2">
+        <h2 className="text-heading-desktop-3 text-primary">Videoteca</h2>
+        <div className="flex flex-col items-stretch md:grid grid-cols-6 gap-x-2 md:gap-x-4 gap-y-6">
+          <VideoPlayer file='ultimPartit' width='720' height='1280' cols={2}/>
+          <VideoPlayer file='falta' width='720' height='1280' cols={2}/>
+          <VideoPlayer file='pasilloCampiones' width='720' height='1280' cols={2}/>
+        </div>
       </article>
+
     </main>
   );
 }
