@@ -43,6 +43,10 @@ p, a{
   @apply font-notosans text-body-desktop;
 }
 
+a, .btn {
+  @apply focus:z-20 focus:outline-2 focus:outline-offset-2 focus:outline-primary active:bg-violet-700;
+}
+
 .btn {
   @apply py-3 px-7 flex items-center justify-center rounded-md transition-transform;
 }

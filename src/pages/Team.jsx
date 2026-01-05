@@ -19,7 +19,7 @@ function Team() {
                     <article>
                         <h2 className='text-heading-desktop-3 text-primary'>Últims resultats</h2>
                         <div className='flex flex-col items-center'>
-                            <div className='w-full p-4 bg-greyAE text-primary flex justify-center items-center gap-5'>
+                            <div className='w-full p-4 bg-light text-primary flex justify-center items-center gap-5'>
                                 <img src="/images/logo-alzina.png" alt="logo equip" className='size-8' />
                                 <p>4-0</p>
                                 <img src="/images/logo-alzina.png" alt="logo equip" className='size-8' />

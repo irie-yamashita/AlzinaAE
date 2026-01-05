@@ -10,7 +10,7 @@ export default {
         primary: '#183753',
         secondary: '#e6c707',
         background: '#FEFCF0',
-        greyAE: '#f6f4ea'
+        light: '#f6f4ea'
       },
       fontFamily: {
         catallina: ['Catallina', 'sans-serif'],
