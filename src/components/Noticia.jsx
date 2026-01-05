@@ -1,6 +1,6 @@
 function Noticia({ info }) {
   return (
-    <article className="max-w-[312px] pb-8 flex flex-col justify-start items-center gap-10 rounded-md overflow-hidden border hover:scale-105 transition-transform">
+    <article className="w-full pb-8 flex flex-col justify-start items-center gap-10 rounded-md overflow-hidden border hover:scale-105 transition-transform">
       <div className="relative w-full">
         <img
           className="w-full h-[251px] object-cover"

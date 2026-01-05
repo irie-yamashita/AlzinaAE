@@ -114,7 +114,7 @@ function Inscriptions() {
       <div className="flex flex-col pt-4">
         <label className="text-background" htmlFor={name}>{label}</label>
         <input onChange={handleChange} className={`px-3 h-10 rounded-md bg-background ${errors[id] ? 'border !border-red-500' : 'border-background'}`} type={type} id={id}name={name} />
-        <span className="text-xs font-medium text-red-600 mt-1 block">{errors[name]}</span>
+        <span className="text-xs font-medium text-red-300 mt-1 block">{errors[name]}</span>
       </div>
     )
   }

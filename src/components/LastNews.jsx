@@ -35,7 +35,7 @@ function LastNews() {
         <div className="flex flex-col md:grid grid-cols-3 items-stretch gap-9 lg:gap-12">
           {noticies.map((noticia) => {
             return(
-            <a className="flex justify-center" href="/noticies">
+            <a className="flex justify-center" href="/noticies" key={noticia.id}>
               <Noticia key={noticia.id} info={noticia}></Noticia>
             </a>
             )
