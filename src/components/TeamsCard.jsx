@@ -10,13 +10,13 @@ function SectionCard({ sectionName, teams }) {
                 </header>
                 <div className="grid grid-cols-2 opacity-0 max-h-[200px] group-hover:opacity-100 has-[a:focus]:opacity-100 overflow-hidden group-hover:px-2 has-[a:focus]:px-2 transition-all duration-500 ease-in-out gap-y-3 py-4 delay-200">
                     {teams.map((team) => (
-                        <a href="" key={team} className="flex items-center gap-3 text-background hover:text-secondary group/inner focus:text-secondary focus:outline-none">
+                        <a href="" key={team.id} className="flex items-center gap-3 text-background hover:text-secondary group/inner focus:text-secondary focus:outline-none">
                             <img
                                 className="size-5 border-1 border-background rounded-full group-hover/inner:outline group-hover/inner:outline-2 group-hover/inner:outline-secondary group-focus/inner:outline group-focus/inner:outline-2 group-focus/inner:text-secondary"
                                 src="/icons/ball-blue.png"
                                 alt="pilota"
                             />
-                            <p>{team}</p>
+                            <p>{team.name}</p>
                         </a>
                     ))}
                 </div>

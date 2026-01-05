@@ -1,0 +1,100 @@
+{
+    "results": [
+        {
+            "id": 1,
+            "team": "infA_M",
+            "home": true,
+            "date": "17-11-2025",
+            "homeTeam": {
+                "name": "Alzina AE",
+                "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
+                "goals": "4"
+            },
+            "awayTeam": {
+                "name": "ITB",
+                "logo": "https://files.fcf.cat/img/_125vermell.png",
+                "goals": "1"
+            }
+        },
+        {
+            "id": 2,
+            "team": "cadB_M",
+            "home": false,
+            "date": "18-11-2025",
+            "homeTeam": {
+                "name": "ITB",
+                "logo": "https://files.fcf.cat/img/_125vermell.png",
+                "goals": "2"
+            },
+            "awayTeam": {
+                "name": "Alzina AE",
+                "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
+                "goals": "2"
+            }
+        },
+        {
+            "team": "senB_M",
+            "id": 3,
+            "home": true,
+            "date": "07-12-2025",
+            "homeTeam": {
+                "name": "Alzina AE",
+                "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
+                "goals": "4"
+            },
+            "awayTeam": {
+                "name": "ITB",
+                "logo": "https://files.fcf.cat/img/_125vermell.png",
+                "goals": "1"
+            }
+        },
+        {
+            "team": "infB_F",
+            "id": 4,
+            "home": true,
+            "date": "04-12-2025",
+            "homeTeam": {
+                "name": "Alzina AE",
+                "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
+                "goals": "4"
+            },
+            "awayTeam": {
+                "name": "ITB",
+                "logo": "https://files.fcf.cat/img/_125vermell.png",
+                "goals": "1"
+            }
+        },
+        {
+            "team": "juvA_M",
+            "id": 5,
+            "home": false,
+            "date": "15-12-2025",
+            "homeTeam": {
+                "name": "ITB",
+                "logo": "https://files.fcf.cat/img/_125vermell.png",
+                "goals": "2"
+            },
+            "awayTeam": {
+                "name": "Alzina AE",
+                "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
+                "goals": "2"
+            }
+        },
+        {
+            "team": "senA_F",
+            "id": 6,
+            "home": false,
+            "date": "16-12-2025",
+            "homeTeam": {
+                "name": "ITB",
+                "logo": "https://files.fcf.cat/img/_125vermell.png",
+                "goals": "2"
+            },
+            "awayTeam": {
+                "name": "Alzina AE",
+                "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
+                "goals": "4"
+            }
+        }
+    ]
+}

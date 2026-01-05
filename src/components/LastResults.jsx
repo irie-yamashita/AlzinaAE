@@ -1,105 +1,15 @@
   import { Calendar } from "react-feather";
   import Result from "./Result";
+  import { useState, useEffect } from "react";
+  import { getLastResults, getTeamById } from "../services/apiService";
+
 
   function LastResults() {
-    const results = [
-      {
-        section: "Infantil 'A'",
-        match: {
-          id: 1,
-          homeTeam: {
-            name: "Alzina AE",
-            logo: "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
-            goals: "4",
-          },
-          awayTeam: {
-            name: "ITB",
-            logo: "https://files.fcf.cat/img/_125vermell.png",
-            goals: "1",
-          },
-        },
-      },
-      {
-        section: "Cadet 'B'",
-        match: {
-          id: 2,
-          homeTeam: {
-            name: "ITB",
-            logo: "https://files.fcf.cat/img/_125vermell.png",
-            goals: "2",
-          },
-          awayTeam: {
-            name: "Alzina AE",
-            logo: "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
-            goals: "2",
-          },
-        },
-      },
-      {
-        section: "Infantil 'A'",
-        match: {
-          id: 3,
-          homeTeam: {
-            name: "Alzina AE",
-            logo: "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
-            goals: "4",
-          },
-          awayTeam: {
-            name: "ITB",
-            logo: "https://files.fcf.cat/img/_125vermell.png",
-            goals: "1",
-          },
-        },
-      },
-      {
-        section: "Infantil 'A'",
-        match: {
-          id: 4,
-          homeTeam: {
-            name: "Alzina AE",
-            logo: "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
-            goals: "4",
-          },
-          awayTeam: {
-            name: "ITB",
-            logo: "https://files.fcf.cat/img/_125vermell.png",
-            goals: "1",
-          },
-        },
-      },
-      {
-        section: "Cadet 'B'",
-        match: {
-          id: 5,
-          homeTeam: {
-            name: "ITB",
-            logo: "https://files.fcf.cat/img/_125vermell.png",
-            goals: "2",
-          },
-          awayTeam: {
-            name: "Alzina AE",
-            logo: "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
-            goals: "2",
-          },
-        },
-      },
-      {
-        section: "Sènior Fem 'A'",
-        match: {
-          id: 6,
-          homeTeam: {
-            name: "ITB",
-            logo: "https://files.fcf.cat/img/_125vermell.png",
-            goals: "2",
-          },
-          awayTeam: {
-            name: "Alzina AE",
-            logo: "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
-            goals: "4",
-          },
-        },
-      },
-    ];
+    const [results, setResults] = useState([]);
+
+    useEffect(() => {
+      getLastResults('FCF').then(setResults);
+    }, []);
 
     return (
       <section className="container py-12">
@@ -108,9 +18,8 @@
           {results.map((result) => {
             return (
               <Result
-                key={result.match.id}
-                section={result.section}
-                match={result.match}
+                key={result.id}
+                match={result}
               />
             );
           })}

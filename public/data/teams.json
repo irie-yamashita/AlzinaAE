@@ -1,0 +1,94 @@
+{
+    "teams": [
+        {
+            "id": "benjA_M",
+            "name": "Benjamí 'A'",
+            "category": "CEEB",
+            "players": [
+                {
+                    "id": 1,
+                    "name": "",
+                    "lastname": ""
+                }
+            ]
+        },
+        {
+            "id": "prealA_M",
+            "name": "Prealeví 'A'",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "alA_M",
+            "name": "Aleví 'A'",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "prealB_M",
+            "name": "Preinfantil 'A'",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "infA_M",
+            "name": "Infantil 'A'",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "infA_F",
+            "name": "Infantil Fem 'A'",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "cadA_M",
+            "name": "Cadet 'A'",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "infB_F",
+            "name": "Infantil Fem 'B'",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "cadB_M",
+            "name": "Cadet 'B'",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "jov",
+            "name": "Joves",
+            "category": "CEEB",
+            "players": []
+        },
+        {
+            "id": "juvA_M",
+            "name": "Juvenil 'A'",
+            "category": "FCF",
+            "players": []
+        },
+        {
+            "id": "senA_F",
+            "name": "Sènior Fem 'A'",
+            "category": "FCF",
+            "players": []
+        },
+        {
+            "id": "senA_M",
+            "name": "Sènior Masc 'A'",
+            "category": "FCF",
+            "players": []
+        },
+        {
+            "id": "senB_M",
+            "name": "Sènior Masc 'B'",
+            "category": "FCF",
+            "players": []
+        }
+    ]
+}

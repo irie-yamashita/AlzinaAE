@@ -3,7 +3,7 @@ import { Link, useLocation }  from 'react-router-dom';
 import SideMenu from './SideMenu';
 import { useState, useEffect } from 'react';
 
-function Navbar() {
+function Header() {
 
     // perquè es seleccioni la pàgina actual
     const location = useLocation();
@@ -38,9 +38,9 @@ function Navbar() {
 
     return (
         <header className="bg-primary flex justify-between items-center p-5 border-b-2 border-background sticky top-0 z-50" >
-            <Link to="/" className="flex gap-2 items-center text-background">
+            <Link to="/" className="flex gap-2 items-end text-background w-fit shrink-0">
                 <img src="https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png" alt="logoClub" className="w-[37px] md:ml-4"/>
-                <p className="font-catallina text-xl pt-0.5">ae alzina</p>
+                <p className="font-catallina text-xl">ae alzina</p>
             </Link>
             <nav className="flex justify-end md:justify-evenly md:items-center w-3/4  text-background">
                 <button
@@ -63,4 +63,4 @@ function Navbar() {
 
 }
 
-export default Navbar;
+export default Header;
