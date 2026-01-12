@@ -38,7 +38,7 @@ function Footer() {
     ];
 
     return (
-        <footer className="bg-primary p-10 md:py-10 text-background flex flex-col md:flex-row justify-center md:justify-evenly items-stretch md:items-center gap-6 md:gap-4 w-full mt-12">
+        <footer className="bg-primary p-10 xl:py-10 text-background flex flex-col xl:flex-row justify-center xl:justify-evenly items-stretch xl:items-center gap-6 xl:gap-4 w-full mt-12">
             <nav className="flex flex-col gap-2">
                 <h2 className="text-secondary">Menú</h2>
                 <div className="grid grid-rows-3 grid-flow-col gap-x-9">

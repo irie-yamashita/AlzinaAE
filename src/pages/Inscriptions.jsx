@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { validarCorreu, validarTelefon, validarMajoriaEdat, validarCamp, validarFormulari } from "../utils/validations";
 import '../assets/css/formularis.css'
 
-
 function Inscriptions() {
+
+  /*HOOK useRef*/
+  const firstInput = useRef(null);
+  useEffect(() => {
+    firstInput.current.focus();
+  }, []);
+
 
   //* DADES
   const inputs = [
@@ -108,10 +114,10 @@ function Inscriptions() {
     return Object.values(updatedErrors).every((msg) => msg === "");
   };
 
-  function renderInput(input) {
+  function renderInput(input, i) {
     const { name, id, type, label } = input;
     return (
-      <div className="flex-column">
+      <div className="flex-column" key={name} >
         <label className="input-text-label " htmlFor={name}>{label}</label>
         <input onChange={handleChange} className={`input-text ${errors[id] ? 'form-message error' : 'border-background'}`} type={type} id={id} name={name} />
         <span className="text-error">{errors[name]}</span>
@@ -128,7 +134,7 @@ function Inscriptions() {
         <img className="logo" src="/images/escut-alzina.png" alt="logo alzina" />
         <div className="flex-column gap-6">
           <header className="form-header">
-            <h3 className="form-title">Inscriu-te!</h3>
+            <h2 className="form-title">Inscriu-te!</h2>
             <p className="form-description">
               Emplena el formulari per rebre el formulari d'inscripció al nostre
               club.
@@ -158,6 +164,7 @@ function Inscriptions() {
 
             <div className="radio-option">
               <input
+                ref={firstInput}
                 type="radio"
                 name="inscriptionType"
                 id="renew"
@@ -170,18 +177,20 @@ function Inscriptions() {
 
             {/* Select */}
             <div className="select-wrapper">
+              <label className="sr-only" htmlFor="team">Equip</label>
               <select
                 name="team"
                 id="team"
                 value={formData.team}
                 onChange={handleChange}
+                aria-describedby=""
               >
                 <option value="fcf">FCF</option>
                 <option value="ceeb">CEEB</option>
               </select>
             </div>
 
-            {inputs.map((input) => renderInput(input))}
+            {inputs.map((input, i) => renderInput(input))}
           </fieldset>
 
           <button className="submit-btn" type="submit">
