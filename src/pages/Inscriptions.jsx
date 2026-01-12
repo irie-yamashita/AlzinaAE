@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { validarCorreu, validarTelefon, validarMajoriaEdat, validarCamp, validarFormulari } from "../utils/validations"; 
+import { validarCorreu, validarTelefon, validarMajoriaEdat, validarCamp, validarFormulari } from "../utils/validations";
+import '../assets/css/formularis.css'
 
 
 function Inscriptions() {
 
   //* DADES
   const inputs = [
-    { id: 'name', name: 'name', label: 'Nom', required: true, type: 'text'},
+    { id: 'name', name: 'name', label: 'Nom', required: true, type: 'text' },
     { id: 'lastName', name: 'lastName', label: 'Cognom', required: true, type: 'text' },
     { id: 'phone', name: 'phone', label: 'Telèfon', required: true, type: 'telf' },
     { id: 'mail', name: 'mail', label: 'Correu electrònic', required: true, type: 'text' },
@@ -34,7 +35,6 @@ function Inscriptions() {
     phone: "",
     birthdate: "",
   });
-
 
 
   //* HANDLERS
@@ -108,65 +108,87 @@ function Inscriptions() {
     return Object.values(updatedErrors).every((msg) => msg === "");
   };
 
-  function renderInput (input) {
-    const {name, id, type, label} = input;
+  function renderInput(input) {
+    const { name, id, type, label } = input;
     return (
-      <div className="flex flex-col pt-4">
-        <label className="text-background" htmlFor={name}>{label}</label>
-        <input onChange={handleChange} className={`px-3 h-10 rounded-md bg-background ${errors[id] ? 'border !border-red-500' : 'border-background'}`} type={type} id={id}name={name} />
-        <span className="text-xs font-medium text-red-300 mt-1 block">{errors[name]}</span>
+      <div className="flex-column">
+        <label className="input-text-label " htmlFor={name}>{label}</label>
+        <input onChange={handleChange} className={`input-text ${errors[id] ? 'form-message error' : 'border-background'}`} type={type} id={id} name={name} />
+        <span className="text-error">{errors[name]}</span>
       </div>
     )
   }
 
 
-  
   return (
     <main className="container py-12">
-      <div>
-        <h1 className="text-primary text-heading-desktop-2">Inscripcions</h1>
-      </div>
-      <form className="bg-primary w-full rounded-xl p-20 mb-10 flex flex-col gap-8" onSubmit={handleSubmit}>
-        <header className="flex flex-col gap-2 pb-8">
-          <h3 className="text-secondary">Inscriu-te!</h3>
-          <p className="text-background">
-            Emplena el formulari per rebre el formulari d'inscripció al nostre
-            club.
-          </p>
-        </header>
-        {/* Missatge global d'èxit/error (resum) */}
-        {submitMessage && (
-          <div
-            className={`p-3 mb-4 rounded-lg text-center font-medium ${submitMessage.type === "success"
-              ? "bg-green-100 text-green-700 border border-green-300"
-              : "bg-red-100 text-red-700 border border-red-300"
-              }`}
-          >
-            {submitMessage.text}
-          </div>
-        )}
-        <fieldset className="flex flex-col justify-stretch">
-          <div className="flex text-background justify-center gap-12">
-            <div className="flex items-center gap-2">
-              <input type="radio" name="inscriptionType" id="new" value="new" onChange={handleChange} checked={formData.inscriptionType === "new"}/>
+      <h1 className="text-primary text-heading-mobile-2 md:text-heading-desktop-2">Inscripcions</h1>
+
+      <form className="form" onSubmit={handleSubmit}>
+        <img className="logo" src="/images/escut-alzina.png" alt="logo alzina" />
+        <div className="flex-column gap-6">
+          <header className="form-header">
+            <h3 className="form-title">Inscriu-te!</h3>
+            <p className="form-description">
+              Emplena el formulari per rebre el formulari d'inscripció al nostre
+              club.
+            </p>
+          </header>
+
+          {/* Missatge global */}
+          {submitMessage && (
+            <div className={`form-message ${submitMessage.type}`}>
+              {submitMessage.text}
+            </div>
+          )}
+
+          <fieldset className="form-grid">
+            {/* Radio buttons */}
+            <div className="radio-option">
+              <input
+                type="radio"
+                name="inscriptionType"
+                id="new"
+                value="new"
+                onChange={handleChange}
+                checked={formData.inscriptionType === "new"}
+              />
               <label htmlFor="new">Nova inscripció</label>
             </div>
-            <div className="flex items-center gap-2">
-              <input type="radio" name="inscriptionType" id="renew" value="renew" onChange={handleChange} checked={formData.inscriptionType === "renew"} />
+
+            <div className="radio-option">
+              <input
+                type="radio"
+                name="inscriptionType"
+                id="renew"
+                value="renew"
+                onChange={handleChange}
+                checked={formData.inscriptionType === "renew"}
+              />
               <label htmlFor="renew">Renovació</label>
             </div>
-          </div>
-          <div className="flex w-full">
-            <select name="team" id="team" value={formData.team} onChange={handleChange} >
-              <option value="fcf">FCF</option>
-              <option value="ceeb">CEEB</option>
-            </select>
-          </div>
-          {inputs.map((input) => renderInput(input))}
 
-        </fieldset>
-        <button className="btn bg-secondary w-fit self-end" type="submit">Enviar</button>
-      </form>
+            {/* Select */}
+            <div className="select-wrapper">
+              <select
+                name="team"
+                id="team"
+                value={formData.team}
+                onChange={handleChange}
+              >
+                <option value="fcf">FCF</option>
+                <option value="ceeb">CEEB</option>
+              </select>
+            </div>
+
+            {inputs.map((input) => renderInput(input))}
+          </fieldset>
+
+          <button className="submit-btn" type="submit">
+            Enviar
+          </button>
+        </div>
+        </form>
     </main>
   );
 }

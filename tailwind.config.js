@@ -19,6 +19,7 @@ export default {
       fontSize: {
         'heading-desktop-1': '50px;',
         'heading-desktop-2': '35px;',
+        'heading-mobile-2': '30px;',
         'heading-desktop-3': '25px',
         'heading-desktop-4': '20px',
         'body-desktop': '16px',

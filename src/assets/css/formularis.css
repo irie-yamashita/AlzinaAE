@@ -1,0 +1,148 @@
+.form {
+    background-color: #183753;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    padding: 40px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+
+@media (min-width: 1024px) {
+    .form {
+        padding: 40px 60px;
+        gap: 30px;
+        border-radius: 16px;
+
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .logo {
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .form-title {
+        font-size: 18px;
+    }
+
+}
+
+
+.form-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.form-title {
+    font-size: 20px;
+    color: #e6c707;
+}
+
+.form-description {
+    color: #FEFCF0;
+}
+
+.form-message {
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-message.success {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #86efac;
+}
+
+.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+}
+
+.text-error {
+    color: #fca5a5;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px 20px;
+    width: 100%;
+}
+
+
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FEFCF0;
+}
+
+.select-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .select-wrapper {
+        grid-column: span 2;
+    }
+
+    .submit-btn {
+        width: fit-content;
+    }
+}
+
+.select-wrapper select {
+    width: 100%;
+    height: 40px;
+}
+
+.submit-btn {
+    background-color: #e6c707;
+    align-self: flex-end;
+    width: 100%;
+    padding: 8px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text-label {
+    color: #FEFCF0;
+}
+
+.input-text {
+    padding: 0 12px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: #FEFCF0;
+}

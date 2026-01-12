@@ -50,8 +50,8 @@ function Footer() {
             <div className="flex flex-col gap-2">
                 <h2 className="text-secondary">Contacte</h2>
                 <div className="flex flex-col gap-2">
-                    <a className="flex gap-2 items-center" href="mailto:aeealzina@gmail.com"><Mail/> aeealzina@gmail.com</a>
-                    <p className="flex gap-2 items-center"><Home/>  Passatge de Salvador Riera, 2, Sant Andreu, 08027 Barcelona</p>
+                    <a className="flex gap-2 items-center" href="mailto:aeealzina@gmail.com"><Mail className="shrink-0"/> aeealzina@gmail.com</a>
+                    <p className="flex gap-2 items-center"><Home className="shrink-0"/>  Passatge de Salvador Riera, 2, Sant Andreu, 08027 Barcelona</p>
                 </div>
             </div>
             <div className="flex flex-col gap-2">

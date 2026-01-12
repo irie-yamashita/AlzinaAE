@@ -15,9 +15,9 @@ function SideMenu({ isOpen, onClose, routes, isActive }) {
         document.addEventListener("mousedown", handleClickOutside);
 
 
-        // handler resize -> quan és +768 tancar menú
+        // handler resize -> quan és +1024 tancar menú
         const handleResize = (e) => {
-            if (window && window.innerWidth >= 768 && isOpen) { // md = 768px
+            if (window && window.innerWidth >= 1024 && isOpen) { // xl = 1024px
                 onClose();
             }
         }
@@ -58,7 +58,7 @@ function SideMenu({ isOpen, onClose, routes, isActive }) {
                 <button onClick={onClose} aria-label="Tancar menú principal" className="btn text-secondary self-end"><X></X></button>
                 <nav className="flex flex-col p-5 gap-3">
                     {routes.map((a) => {
-                        return <Link key={a.title} className={`text-background transition-transform hover:text-secondary hover:scale-[101%] ${isActive(a.route) ? ' bg-light' : ''}`} to={a.route}>{a.title}</Link>
+                        return <Link key={a.title} className={`text-background transition-transform hover:text-secondary hover:scale-[101%] ${isActive(a.route) ? ' bg-light text-primary px-2 py-1 rounded-md' : ''}`} to={a.route}>{a.title}</Link>
                     })}
                 </nav>
             </div>
