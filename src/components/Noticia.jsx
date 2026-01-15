@@ -5,7 +5,7 @@ function Noticia({ info }) {
         <img
           className="w-full h-[251px] object-cover"
           src={info.img}
-          alt="fotoNoticia"
+          alt={info.alt ? info.alt : 'foto imatge'}
         />
         <div className="bg-primary absolute -bottom-10 right-2 size-20 rounded-md text-background flex flex-col justify-center items-center text-center">
           <p>{dateToText(info.date).day}</p>

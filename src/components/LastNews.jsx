@@ -9,14 +9,15 @@ function LastNews() {
       titular:
         "Começa una nova temporada. Esperem molts èxits per totes les nostres seccions.",
       img: "images/cartellMasculi.jpg",
+      alt: "foto inici temporada 25-26",
     },
     {
       id: 'n2',
       title: "CAMPIONES DE LLIGA",
       date: "2025-05-01",
-      titular:
-        "El nostre sènior femení ha guanyat la lliga a falta de tres jornades.",
+      titular: "El nostre sènior femení ha guanyat la lliga a falta de tres jornades.",
       img: "images/campiones.jpg",
+      alt: "foto campiones lliga",
     },
     {
       id: 'n3',
@@ -24,6 +25,7 @@ function LastNews() {
       date: "2025-06-23",
       titular: "Comencen les jornades de portes obertes. Apunteu-vos!",
       img: "images/cartellFemeni.jpg",
+      alt: "foto portes obertes",
     }
   ];
 
