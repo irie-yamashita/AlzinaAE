@@ -115,11 +115,12 @@ function Inscriptions() {
   };
 
   function renderInput(input, i) {
+    
     const { name, id, type, label } = input;
     return (
       <div className="flex-column" key={name} >
         <label className="input-text-label " htmlFor={name}>{label}</label>
-        <input onChange={handleChange} className={`input-text ${errors[id] ? 'form-message error' : 'border-background'}`} type={type} id={id} name={name} />
+        <input onChange={handleChange} className={`input-text ${errors[name] ? 'form-message error' : 'border-background'}`} type={type} id={id} name={name} ref={i==0 ? firstInput : null} />
         <span className="text-error">{errors[name]}</span>
       </div>
     )
@@ -164,7 +165,6 @@ function Inscriptions() {
 
             <div className="radio-option">
               <input
-                ref={firstInput}
                 type="radio"
                 name="inscriptionType"
                 id="renew"
@@ -190,7 +190,7 @@ function Inscriptions() {
               </select>
             </div>
 
-            {inputs.map((input, i) => renderInput(input))}
+            {inputs.map((input, i) => renderInput(input, i))}
           </fieldset>
 
           <button className="submit-btn" type="submit">
