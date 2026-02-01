@@ -119,7 +119,7 @@ function Inscriptions() {
     const { name, id, type, label } = input;
     return (
       <div className="flex-column" key={name} >
-        <label className="input-text-label " htmlFor={name}>{label}</label>
+        <label className="input-text-label text-white" htmlFor={name}>{label}</label>
         <input onChange={handleChange} className={`input-text ${errors[name] ? 'form-message error' : 'border-background'}`} type={type} id={id} name={name} ref={i==0 ? firstInput : null} />
         <span className="text-error">{errors[name]}</span>
       </div>
@@ -150,6 +150,7 @@ function Inscriptions() {
           )}
 
           <fieldset className="form-grid">
+            <legend className="sr-only text-white">Omple el formulari amb les teves dades</legend>
             {/* Radio buttons */}
             <div className="radio-option">
               <input
@@ -160,7 +161,7 @@ function Inscriptions() {
                 onChange={handleChange}
                 checked={formData.inscriptionType === "new"}
               />
-              <label htmlFor="new">Nova inscripció</label>
+              <label className="text-white" htmlFor="new">Nova inscripció</label>
             </div>
 
             <div className="radio-option">
@@ -177,7 +178,7 @@ function Inscriptions() {
 
             {/* Select */}
             <div className="select-wrapper">
-              <label className="sr-only" htmlFor="team">Equip</label>
+              <label className="sr-only text-white" htmlFor="team">Equip</label>
               <select
                 name="team"
                 id="team"

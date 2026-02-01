@@ -19,6 +19,7 @@ function Stats() {
 
   return (
     <section className="bg-primary py-[30px] min-h-[300px] flex items-center">
+      <h2 className="sr-only text-secondary">Registres club</h2>
       <div className="container grid grid-cols-1 md:grid-cols-3 gap-y-6">
         {stats.map((stat, i) => {
           return (

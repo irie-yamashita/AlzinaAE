@@ -22,7 +22,7 @@
             "home": false,
             "date": "18-11-2025",
             "homeTeam": {
-                "name": "ITB",
+                "name": "ASIX",
                 "logo": "https://files.fcf.cat/img/_125vermell.png",
                 "goals": "2"
             },
@@ -43,7 +43,7 @@
                 "goals": "4"
             },
             "awayTeam": {
-                "name": "ITB",
+                "name": "DAWe",
                 "logo": "https://files.fcf.cat/img/_125vermell.png",
                 "goals": "1"
             }
@@ -59,7 +59,7 @@
                 "goals": "4"
             },
             "awayTeam": {
-                "name": "ITB",
+                "name": "DAM",
                 "logo": "https://files.fcf.cat/img/_125vermell.png",
                 "goals": "1"
             }
@@ -70,7 +70,7 @@
             "home": false,
             "date": "15-12-2025",
             "homeTeam": {
-                "name": "ITB",
+                "name": "DAMvi",
                 "logo": "https://files.fcf.cat/img/_125vermell.png",
                 "goals": "2"
             },
@@ -86,7 +86,7 @@
             "home": false,
             "date": "16-12-2025",
             "homeTeam": {
-                "name": "ITB",
+                "name": "SMX",
                 "logo": "https://files.fcf.cat/img/_125vermell.png",
                 "goals": "2"
             },

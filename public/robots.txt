@@ -1,0 +1,11 @@
+# Arxiu: robots.txt
+# Regla 1: Per a TOTS els robots (*)
+User-agent: *
+Disallow: /admin/
+Disallow: /privat/
+Allow: /
+
+# Sitemap del lloc
+Sitemap: https://www.el-teu-club.com/sitemap.xml
+
+

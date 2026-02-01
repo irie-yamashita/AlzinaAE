@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <url>
+        <loc>https://www.ae-alzina.cat/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.ae-alzina.cat/club</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.ae-alzina.cat/inscripcions</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.ae-alzina.cat/equips</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.ae-alzina.cat/equips/senior-fem</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.ae-alzina.cat/calendari</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.ae-alzina.cat/noticies</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.ae-alzina.cat/multimedia</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.ae-alzina.cat/contacte</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    
+    
+</urlset>
