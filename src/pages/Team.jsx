@@ -1,5 +1,13 @@
 import { AlertCircle } from 'react-feather';
+//import '../assets/css/teamDetail.css'
 
+
+const players = [
+    { name: 'Sara', surnames: 'Tamurejo Mora' },
+    { name: 'Mauricio', surnames: 'Huamaní Figueroa,' },
+    { name: 'Ashmed', surnames: 'Barreiro Plasencia' },
+
+]
 
 function Team() {
     return (
@@ -32,6 +40,19 @@ function Team() {
                 </div>
                 <article>
                     <h2 className='text-heading-desktop-3 text-primary'>Plantilla</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h3>Jugadors/es</h3>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                        </tbody>
+                    </table>
                 </article>
             </div>
         </main>

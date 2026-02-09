@@ -26,7 +26,7 @@ function App() {
           <Route path='/inscripcions' element={<Inscriptions />} />
           <Route path='/contacte' element={<Contacte />} />
           <Route path='/equips' element={<Teams />} />
-          <Route path='/equip' element={<Team />} />
+          <Route path='/equips/:id' element={<Team />} />
           <Route path='/calendari' element={<Calendar />} />
           <Route path='/noticies' element={<News />} />
           <Route path='/club' element={<Club />} />
