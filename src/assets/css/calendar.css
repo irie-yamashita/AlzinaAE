@@ -1,0 +1,64 @@
+/* ---- COLORS ---- */
+/* ---- FONTS ---- */
+/* ---- FONT SIZE ---- */
+.container, .calendar-container {
+  max-width: 1200px;
+  margin: auto 0px;
+  padding: 24px 48px;
+}
+
+.flex-center, .matches-container article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col, .matches-container, .calendar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-container {
+  gap: 30px;
+  font-size: 16px;
+}
+.calendar-container h2 {
+  color: #183753;
+  font-family: "Catallina", sans-serif;
+  font-size: 25px;
+}
+.calendar-container h2 span {
+  font-size: 20px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.title-container h1 {
+  color: #183753;
+  font-family: "Catallina", sans-serif;
+  font-size: 35px;
+}
+.title-container .icon {
+  color: #183753;
+  width: 24px;
+  height: 24px;
+}
+
+.matches-container {
+  gap: 12px;
+}
+.matches-container article {
+  gap: 32px;
+  padding: 20px;
+  background-color: #f6f4ea;
+}
+.matches-container article p {
+  font-family: "Catallina", sans-serif;
+}
+.matches-container article img {
+  width: 24px;
+  height: 24px;
+}/*# sourceMappingURL=calendar.css.map */

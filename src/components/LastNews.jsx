@@ -45,7 +45,7 @@ function LastNews() {
         </div>
 
         <div className="flex justify-center items-center">
-          <a href="/noticies" className="btn w-60 uppercase flex gap-2 justify-center items-center btn-primary !text-secondary p-2 rounded-lg">Veure més notícies</a>
+          <a href="/noticies" className="btn w-60 uppercase flex gap-2 justify-center items-center btn-secondary !text-primary p-2 rounded-lg">Veure més notícies</a>
         </div>
       </div>
       

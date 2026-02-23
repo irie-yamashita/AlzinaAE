@@ -1,8 +1,6 @@
 import { AlertCircle } from 'react-feather';
 import { Link } from 'react-router-dom';
 
-
-
 function Hero() {
     return (
         <section className="relative bg-primary text-background">

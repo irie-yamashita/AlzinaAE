@@ -1,0 +1,80 @@
+@use "variables" as *;
+
+.container {
+    max-width: 1200px;
+    margin: auto 0px;
+    padding: 24px 48px;
+
+}
+
+.flex-center {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-container {
+    @extend .container;
+
+    @extend .flex-col;
+    gap: 30px;
+
+    font-size: $text-body-desktop;
+
+    
+    h2 {
+        color: $color-primary;
+        font-family: $font-titles;
+        font-size: $text-heading-desktop-3;
+
+        span {
+            font-size: $text-heading-desktop-4;
+        }
+    }
+
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h1 {
+        color: $color-primary;
+        font-family: $font-titles;
+        font-size: $text-heading-desktop-2;
+    }
+
+    .icon {
+        color: $color-primary;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+.matches-container {
+    @extend .flex-col;
+    gap: 12px;
+
+    article {
+        @extend .flex-center;
+        gap: 32px;
+        padding: 20px;
+        background-color: $color-light;
+
+        p {
+            font-family: $font-titles;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
