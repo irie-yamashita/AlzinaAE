@@ -1,89 +1,156 @@
 /* ---- COLORS ---- */
 /* ---- FONTS ---- */
 /* ---- FONT SIZE ---- */
-.flex-center, .teams-container, .matches-container article .team {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-column, .calendar-container section, .calendar-container {
-  display: flex;
-  flex-direction: column;
+body {
+  background-color: white;
 }
 
 .calendar-container {
-  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
   gap: 30px;
-  font-size: 16px;
+  font-size: 14px;
+  padding: 20px 20px;
 }
-.calendar-container h2 {
-  color: #183753;
-  font-family: "Catallina", sans-serif;
-  font-size: 25px;
-  border-left: 2px #183753 solid;
-  padding-left: 12px;
+@media (min-width: 768px) {
+  .calendar-container {
+    padding: 30px 20px;
+  }
 }
-.calendar-container h2 span {
-  font-size: 20px;
+@media (min-width: 1024px) {
+  .calendar-container {
+    padding: 30px 10px;
+    font-size: 16px;
+  }
 }
-.calendar-container section {
-  gap: 30px;
-}
-
-.title-container {
+.calendar-container .title-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.title-container h1 {
+.calendar-container .title-container h1 {
   color: #183753;
   font-family: "Catallina", sans-serif;
-  font-size: 35px;
+  font-size: 30px;
 }
-.title-container .icon {
+@media (min-width: 768px) {
+  .calendar-container .title-container h1 {
+    font-size: 35px;
+  }
+}
+.calendar-container .title-container .icon {
   color: #183753;
   width: 24px;
   height: 24px;
 }
-
-.matches-container {
+.calendar-container section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .calendar-container section {
+    gap: 30px;
+  }
+}
+.calendar-container section h2 {
+  color: #183753;
+  font-family: "Catallina", sans-serif;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .calendar-container section h2 {
+    font-size: 25px;
+  }
+}
+.calendar-container section h2 {
+  border-left: 2px #183753 solid;
+  padding-left: 12px;
+}
+.calendar-container section h2 span {
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .calendar-container section h2 span {
+    font-size: 20px;
+  }
+}
+.calendar-container section .matches-container {
   display: grid;
+  align-items: stretch;
   grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .calendar-container section .matches-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .calendar-container section .matches-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.calendar-container section .matches-container {
   gap: 12px;
   padding-left: 20px;
 }
-.matches-container article {
+.calendar-container section .matches-container .match {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  gap: 32px;
+  gap: 20px;
   padding: 20px;
   background-color: #f6f4ea;
+  color: #183753;
   border-radius: 8px;
 }
-.matches-container article .hora {
-  font-size: 35px;
+@media (min-width: 768px) {
+  .calendar-container section .matches-container .match {
+    flex-direction: row;
+    font-size: 35px;
+    gap: 32px;
+  }
+}
+.calendar-container section .matches-container .match .teams-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+.calendar-container section .matches-container .match .vs {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .calendar-container section .matches-container .match .vs {
+    font-size: 16px;
+  }
+}
+.calendar-container section .matches-container .match .hora {
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .calendar-container section .matches-container .match .hora {
+    font-size: 35px;
+  }
+}
+.calendar-container section .matches-container .match .hora {
   font-family: "Catallina";
   color: #183753;
 }
-.matches-container article .lliga {
-  font-size: 14px;
-}
-.matches-container article p {
+.calendar-container section .matches-container .match p {
   font-family: "Catallina", sans-serif;
 }
-.matches-container article img {
+.calendar-container section .matches-container .match img {
   width: 30px;
   height: 30px;
 }
-.matches-container article .team {
+.calendar-container section .matches-container .match .team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
-.matches-container article .team .logo {
+.calendar-container section .matches-container .match .team .logo {
   width: 32px;
   height: 32px;
-}
-
-.teams-container {
-  gap: 20px;
 }/*# sourceMappingURL=calendar.css.map */

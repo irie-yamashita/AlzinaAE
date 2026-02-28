@@ -1,115 +1,194 @@
 @use "variables" as *;
 
+$tema-actual: 'light';
 
-.flex-center {
+@mixin flex-centre {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
-.flex-column {
+@mixin flex-column {
     display: flex;
     flex-direction: column;
 }
 
+body {
+  @if $tema-actual == 'dark' {
+    color: white;
+    background-color: $color-primary;
+    h1, h2, h3, h4, h5, h6  {
+        color: white !important;
+    }
+  } @else {
+    background-color: white;
+  }
+}
+
+
 .calendar-container {
-    padding: 30px 0px;
-    @extend .flex-column;
+    @include flex-column;
     gap: 30px;
 
-    font-size: $text-body-desktop;
+    font-size: $text-body-mobile;
+    padding: 20px 20px;
 
-    
-    h2 {
-        color: $color-primary;
-        font-family: $font-titles;
-        font-size: $text-heading-desktop-3;
-        border-left: 2px $color-primary solid;
-        padding-left: 12px;
-
-        span {
-            font-size: $text-heading-desktop-4;
-        }
+    @media (min-width: 768px) {
+        padding: 30px 20px;
     }
 
-    section {
-        @extend .flex-column;
-        gap: 30px;
+    @media (min-width:1024px) {
+        padding: 30px 10px;
+        font-size: $text-body-desktop;
     }
 
-}
-
-.title-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    h1 {
-        color: $color-primary;
-        font-family: $font-titles;
-        font-size: $text-heading-desktop-2;
-    }
-
-    .icon {
-        color: $color-primary;
-        width: 24px;
-        height: 24px;
-    }
-}
-
-
-.matches-container {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    
-    gap: 12px;
-    padding-left: 20px;
-
-    article {
+    .title-container {
         display: flex;
-        justify-content: space-between;
-        gap: 32px;
-        padding: 20px;
-        background-color: $color-light;
-        border-radius: 8px;
+        align-items: center;
+        gap: 10px;
 
-
-        .hora {
-            font-size: $text-heading-desktop-2;
-            font-family: 'Catallina';
+        h1 {
             color: $color-primary;
-        }
-
-        .lliga {
-            font-size: $text-small-desktop;
-        }
-        
-
-        p {
             font-family: $font-titles;
-        }
+            font-size: $text-heading-mobile-2;
 
-        img {
-            width: 30px;
-            height: 30px;
-        }
-
-        .team {
-            @extend .flex-center;
-            gap: 10px;
-
-            .logo {
-                width: 32px;
-                height: 32px;
+            @media (min-width: 768px) {
+                font-size: $text-heading-desktop-2;
             }
         }
+
+        .icon {
+            @if $tema-actual == 'dark' {
+                color: $color-background !important;
+            }
+            color: $color-primary;
+            width: 24px;
+            height: 24px;
+        }
     }
-}
 
-.teams-container {
-    @extend .flex-center;
-    gap: 20px;
 
+    section {
+        @include flex-column;
+        gap: 20px;
+
+        @media (min-width: 768px) {
+            gap: 30px;
+        }
+
+        h2 {
+            color: $color-primary;
+            font-family: $font-titles;
+
+            font-size: $text-heading-mobile-3;
+
+            @media (min-width: 768px) {
+                font-size: $text-heading-desktop-3;
+            }
+
+            border-left: 2px $color-primary solid;
+
+            @if $tema-actual == 'dark' {
+                border-left: 2px $color-background solid;
+            }
+
+            padding-left: 12px;
+
+            span {
+                font-size: $text-heading-mobile-4;
+
+                @media (min-width: 768px) {
+                    font-size: $text-heading-desktop-4;
+                }
+            }
+        }
+
+        .matches-container {
+            display: grid;
+            align-items: stretch;
+            grid-template-columns: 1fr;
+
+            @media (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (min-width: 1024px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+
+            gap: 12px;
+            padding-left: 20px;
+
+            .match {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+                gap: 20px;
+                padding: 20px;
+
+                background-color: $color-light;
+                color: $color-primary;
+                border-radius: 8px;
+
+
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    font-size: $text-heading-desktop-2;
+                    gap: 32px;
+                }
+
+
+                .teams-container {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 10px 20px;
+                }
+
+                .vs {
+                    font-size: $text-body-mobile;
+
+                    @media (min-width: 768px) {
+                        font-size: $text-body-desktop;
+
+                    }
+                }
+
+                .hora {
+                    font-size: $text-heading-mobile-2;
+
+                    @media (min-width: 768px) {
+                        font-size: $text-heading-desktop-2;
+                    }
+
+                    font-family: 'Catallina';
+                    color: $color-primary;
+                }
+
+                p {
+                    font-family: $font-titles;
+                }
+
+
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .team {
+                    @include flex-centre;
+                    gap: 10px;
+
+                    .logo {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+
+    }
 
 }
