@@ -4,7 +4,8 @@
             "id": 1,
             "team": "infA_M",
             "home": true,
-            "date": "17-11-2025",
+            "date": "2026-02-20T17:45:00",
+            "hour": "12:45",
             "homeTeam": {
                 "name": "Alzina AE",
                 "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
@@ -20,7 +21,8 @@
             "id": 2,
             "team": "cadB_M",
             "home": false,
-            "date": "18-11-2025",
+            "date": "2026-02-20T20:00:00",
+            "hour": "18:30",
             "homeTeam": {
                 "name": "ASIX",
                 "logo": "https://files.fcf.cat/img/_125vermell.png",
@@ -36,7 +38,8 @@
             "team": "senB_M",
             "id": 3,
             "home": true,
-            "date": "07-12-2025",
+            "date": "2026-02-20T21:15:00",
+            "hour": "20:00",
             "homeTeam": {
                 "name": "Alzina AE",
                 "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
@@ -52,7 +55,8 @@
             "team": "infB_F",
             "id": 4,
             "home": true,
-            "date": "04-12-2025",
+            "date": "2026-02-21T09:00:00",
+            "hour": "8:15",
             "homeTeam": {
                 "name": "Alzina AE",
                 "logo": "https://files.fcf.cat/escudos/clubes/escudos/00100_0000963496_00100_0000949986_Escudo_Alzina.png",
@@ -68,7 +72,8 @@
             "team": "juvA_M",
             "id": 5,
             "home": false,
-            "date": "15-12-2025",
+            "date": "2026-02-21T14:00:00",
+            "hour": "13:00",
             "homeTeam": {
                 "name": "DAMvi",
                 "logo": "https://files.fcf.cat/img/_125vermell.png",
@@ -84,7 +89,8 @@
             "team": "senA_F",
             "id": 6,
             "home": false,
-            "date": "16-12-2025",
+            "date": "2026-02-22T16:30:00",
+            "hour": "17:45",
             "homeTeam": {
                 "name": "SMX",
                 "logo": "https://files.fcf.cat/img/_125vermell.png",

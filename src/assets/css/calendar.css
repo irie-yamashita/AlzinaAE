@@ -1,24 +1,19 @@
 /* ---- COLORS ---- */
 /* ---- FONTS ---- */
 /* ---- FONT SIZE ---- */
-.container, .calendar-container {
-  max-width: 1200px;
-  margin: auto 0px;
-  padding: 24px 48px;
-}
-
-.flex-center, .matches-container article {
+.flex-center, .teams-container, .matches-container article .team {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-col, .matches-container, .calendar-container {
+.flex-column, .calendar-container section, .calendar-container {
   display: flex;
   flex-direction: column;
 }
 
 .calendar-container {
+  padding: 30px 0px;
   gap: 30px;
   font-size: 16px;
 }
@@ -26,9 +21,14 @@
   color: #183753;
   font-family: "Catallina", sans-serif;
   font-size: 25px;
+  border-left: 2px #183753 solid;
+  padding-left: 12px;
 }
 .calendar-container h2 span {
   font-size: 20px;
+}
+.calendar-container section {
+  gap: 30px;
 }
 
 .title-container {
@@ -48,17 +48,42 @@
 }
 
 .matches-container {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 12px;
+  padding-left: 20px;
 }
 .matches-container article {
+  display: flex;
+  justify-content: space-between;
   gap: 32px;
   padding: 20px;
   background-color: #f6f4ea;
+  border-radius: 8px;
+}
+.matches-container article .hora {
+  font-size: 35px;
+  font-family: "Catallina";
+  color: #183753;
+}
+.matches-container article .lliga {
+  font-size: 14px;
 }
 .matches-container article p {
   font-family: "Catallina", sans-serif;
 }
 .matches-container article img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+}
+.matches-container article .team {
+  gap: 10px;
+}
+.matches-container article .team .logo {
+  width: 32px;
+  height: 32px;
+}
+
+.teams-container {
+  gap: 20px;
 }/*# sourceMappingURL=calendar.css.map */

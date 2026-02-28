@@ -13,15 +13,15 @@ function Calendar() {
     const [results, setResults] = useState([]);
 
     return (
-        <main className="calendar-container">
-            <div className="title-container">
+        <main className="container calendar-container">
+            <header className="title-container">
                 <h1>Calendari</h1>
                 <Calendari className="icon"/> &nbsp;
-            </div>
+            </header>
             <section>
-                <h2>Divendres <span>- 12 sept</span></h2>
+                <h2>Divendres <span>- 20 feb</span></h2>
                 <div className="matches-container">
-                    {results.map((result) => {
+                    {results.filter(m => new Date(m.date).getDay() === 5).map((result) => {
                         return (
                         <Match
                             key={result.id}
@@ -32,13 +32,31 @@ function Calendar() {
                 </div>
             </section>
             <section>
-                <h2>Dissabte <span>- 13 sept</span></h2>
-
+                <h2>Dissabte <span>- 21 feb</span></h2>
+                <div className="matches-container">
+                    {results.filter(m => new Date(m.date).getDay() === 6).map((result) => {
+                        return (
+                        <Match
+                            key={result.id}
+                            match={result}
+                        />
+                        );
+                    })}
+                </div>
             </section>
 
             <section>
-                <h2>Diumenge <span>- 14 sept</span></h2>
-
+                <h2>Diumenge <span>- 22 feb</span></h2>
+                <div className="matches-container">
+                    {results.filter(m => new Date(m.date).getDay() === 0).map((result) => {
+                        return (
+                        <Match
+                            key={result.id}
+                            match={result}
+                        />
+                        );
+                    })}
+                </div>
             </section>
         </main>
     )
