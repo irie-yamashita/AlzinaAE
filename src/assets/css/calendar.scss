@@ -2,6 +2,28 @@
 
 $tema-actual: 'light';
 
+$colors: (
+    'primari': $color-primary,
+    'secundari': $color-secondary,
+);
+
+@each $nom, $valor in $colors {
+    .btn-#{$nom} {
+        background-color: $valor;
+        width: fit-content;
+        padding: 2px 15px;
+        border-radius: 4px;
+        transition: all ease-in-out 6s;
+    }
+
+    .btn-#{$nom}:hover {
+        filter: brightness(90%);
+        scale: 101%;
+    }
+}
+
+
+
 @mixin flex-centre {
     display: flex;
     justify-content: center;
@@ -14,15 +36,23 @@ $tema-actual: 'light';
 }
 
 body {
-  @if $tema-actual == 'dark' {
-    color: white;
-    background-color: $color-primary;
-    h1, h2, h3, h4, h5, h6  {
-        color: white !important;
+    @if $tema-actual =='dark' {
+        color: white;
+        background-color: $color-primary;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white !important;
+        }
     }
-  } @else {
-    background-color: white;
-  }
+
+    @else {
+        background-color: white;
+    }
 }
 
 
@@ -58,9 +88,10 @@ body {
         }
 
         .icon {
-            @if $tema-actual == 'dark' {
+            @if $tema-actual =='dark' {
                 color: $color-background !important;
             }
+
             color: $color-primary;
             width: 24px;
             height: 24px;
@@ -88,7 +119,7 @@ body {
 
             border-left: 2px $color-primary solid;
 
-            @if $tema-actual == 'dark' {
+            @if $tema-actual =='dark' {
                 border-left: 2px $color-background solid;
             }
 
@@ -130,6 +161,8 @@ body {
                 background-color: $color-light;
                 color: $color-primary;
                 border-radius: 8px;
+
+                filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 
 
                 @media (min-width: 768px) {

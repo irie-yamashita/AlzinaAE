@@ -1,5 +1,5 @@
 
-import { Mail, Home, Instagram, Twitter, Facebook } from "react-feather";
+import { Mail, Home, Instagram, Twitter, Facebook, MapPin } from "react-feather";
 
 function Footer() {
     const options = [
@@ -51,7 +51,7 @@ function Footer() {
                 <h2 className="text-secondary">Contacte</h2>
                 <div className="flex flex-col gap-2">
                     <a className="flex gap-2 items-center" href="mailto:aeealzina@gmail.com"><Mail className="shrink-0"/> aeealzina@gmail.com</a>
-                    <p className="flex gap-2 items-center"><Home className="shrink-0"/>  Passatge de Salvador Riera, 2, Sant Andreu, 08027 Barcelona</p>
+                    <p className="flex gap-2 items-center"><MapPin className="shrink-0"/>  Passatge de Salvador Riera, 2, Sant Andreu, 08027 Barcelona</p>
                 </div>
             </div>
             <div className="flex flex-col gap-2">

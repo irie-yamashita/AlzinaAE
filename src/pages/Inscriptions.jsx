@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { validarCorreu, validarTelefon, validarMajoriaEdat, validarCamp, validarFormulari } from "../utils/validations";
 import '../assets/css/formularis.css'
+import { AlertTriangle } from "react-feather";
 
 function Inscriptions() {
 
@@ -63,19 +64,26 @@ function Inscriptions() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validem TOT el formulari
     const valid = isFormValid();
 
-    if (valid) {
-      console.log("Formulari VÀLID: ", formData);
-      setSubmitMessage({
-        type: "success",
-        text: "Registre completat amb èxit!",
-      });
-    } else {
+    if (!valid) {
       setSubmitMessage({
         type: "error",
         text: "Hi ha errors en el formulari. Revisa els camps marcats en vermell.",
+      });
+      return;
+    }
+
+    const sendForm = window.confirm(
+      "Estàs segur/a que vols enviar el formulari?"
+    );
+
+    if (sendForm) {
+      console.log("Formulari VÀLID: ", formData);
+
+      setSubmitMessage({
+        type: "success",
+        text: "Registre completat amb èxit!",
       });
     }
   };
@@ -115,13 +123,18 @@ function Inscriptions() {
   };
 
   function renderInput(input, i) {
-    
+
     const { name, id, type, label } = input;
     return (
       <div className="flex-column" key={name} >
         <label className="input-text-label text-white" htmlFor={name}>{label}</label>
-        <input onChange={handleChange} className={`input-text ${errors[name] ? 'form-message error' : 'border-background'}`} type={type} id={id} name={name} ref={i==0 ? firstInput : null} />
-        <span className="text-error">{errors[name]}</span>
+        <input onChange={handleChange} className={`input-text ${errors[name] ? 'form-message error' : 'border-background'}`} type={type} id={id} name={name} ref={i == 0 ? firstInput : null} />
+        {errors[name] && (
+          <span className="text-error flex items-center gap-2">
+            <AlertTriangle className="size-4" />
+            {errors[name]}
+          </span>
+        )}
       </div>
     )
   }
@@ -198,7 +211,7 @@ function Inscriptions() {
             Enviar
           </button>
         </div>
-        </form>
+      </form>
     </main>
   );
 }

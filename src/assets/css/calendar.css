@@ -1,6 +1,34 @@
 /* ---- COLORS ---- */
 /* ---- FONTS ---- */
 /* ---- FONT SIZE ---- */
+.btn-primari {
+  background-color: #183753;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 15px;
+  border-radius: 4px;
+  transition: all ease-in-out 6s;
+}
+
+.btn-primari:hover {
+  filter: brightness(90%);
+  scale: 101%;
+}
+
+.btn-secundari {
+  background-color: #e6c707;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 15px;
+  border-radius: 4px;
+  transition: all ease-in-out 6s;
+}
+
+.btn-secundari:hover {
+  filter: brightness(90%);
+  scale: 101%;
+}
+
 body {
   background-color: white;
 }
@@ -103,6 +131,7 @@ body {
   background-color: #f6f4ea;
   color: #183753;
   border-radius: 8px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 @media (min-width: 768px) {
   .calendar-container section .matches-container .match {
